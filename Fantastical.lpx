@@ -1,0 +1,12 @@
+#!name=Fantastical Premium
+#!desc=Unlock Fantastical Premium
+#!homepage=https://whatshub.top/plugin/fantastical.plugin
+#!author=yunanwg
+#!tag=VIP Unlock
+#!icon=https://flexibits.com/img/fantastical/branding/apple-app-icon.png?a87f812f0af73d0ea5cc92e28f8d5768
+
+[MITM]
+hostname=api.flexibits.com
+
+[Script]
+http-response ^https:\/\/api\.flexibits\.com\/(v1\/auth\/device|v1\/account\/details) requires-body=1,script-path=https://raw.githubusercontent.com/yunanwg/my-LoonScripts/main/js/fantastical.js
