@@ -10,6 +10,6 @@
 hostname = api.peakwatch.io
 
 [Rewrite]
-^https://api.peakwatch.io/api/v1/d/check response-body-json-jq '.content |= (.isSubscriber = true | .productId = "stress_membership_yearly_discount" | .productIds = ["stress_membership_yearly_discount"])'
+^https://api.peakwatch.io/api/v1/d/check response-body-json-jq '.content |= (.isSubscriber = true | .productId = "peakwatch_pro_yearly_new")'
 
 
