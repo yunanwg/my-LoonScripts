@@ -7,9 +7,9 @@
 #!icon = https://is1-ssl.mzstatic.com/image/thumb/Purple221/v4/a9/82/12/a9821212-93bd-bbeb-2272-380e5ba49167/AppIcon-0-0-1x_U007ephone-0-1-0-85-220.png/492x0w.webp
 
 [Mitm]
-hostname = api.peakwatch.io
+hostname = api.peakwatch.co
 
 [Rewrite]
-^https://api.peakwatch.io/api/v1/d/check response-body-json-jq '.content |= (.isSubscriber = true | .productId = "peakwatch_pro_yearly_new")'
+^https://api.peakwatch.co/api/v1/d/check response-body-json-jq '.content |= (.isSubscriber = true | .productId = "peakwatch_pro_yearly_new")'
 
 
