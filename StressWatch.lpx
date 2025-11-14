@@ -9,6 +9,6 @@
 [Mitm]
 hostname = api.ideation.love
 
-[Script]
-^http-response ^https://api.ideation.love/api/v1/d/check response-body-json-jq '.content |= (.subscriptionStatus = "MEMBERSHIP" | .productId = "stress_membership_yearly_discount" | .productIds = ["stress_membership_yearly_discount"])'
+[Rewrite]
+^https://api.ideation.love/api/v1/d/check response-body-json-jq '.content |= (.subscriptionStatus = "MEMBERSHIP" | .productId = "stress_membership_yearly_discount" | .productIds = ["stress_membership_yearly_discount"])'
 
