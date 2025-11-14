@@ -4,11 +4,11 @@
 #!author = yunanwg
 #!homepage = 
 #!tag = VIP Unlock
-#!icon = https://is1-ssl.mzstatic.com/image/thumb/Purple221/v4/c4/7f/58/c47f58f0-c412-1fb6-123e-03bc5fc6cdbb/AppIcon-0-0-1x_U007ephone-0-1-0-0-85-220.png/1200x630wa.png
+#!icon = https://framerusercontent.com/images/FpVFHJFdjpCkEokT3CXE2loqOrE.png?width=460&height=460
 
 [Mitm]
 hostname = api.ideation.love
 
 [Script]
-http-response ^https://api.ideation.love/api/v1/d/check response-body-json-jq '.content |= (.subscriptionStatus = "MEMBERSHIP" | .productId = "stress_membership_yearly_discount" | .productIds = ["stress_membership_yearly_discount"])'
+^http-response ^https://api.ideation.love/api/v1/d/check response-body-json-jq '.content |= (.subscriptionStatus = "MEMBERSHIP" | .productId = "stress_membership_yearly_discount" | .productIds = ["stress_membership_yearly_discount"])'
 
